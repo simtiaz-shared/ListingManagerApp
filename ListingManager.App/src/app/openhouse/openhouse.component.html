@@ -1,0 +1,91 @@
+<div class="row" style="padding-top:12px;padding-bottom:12px;">
+  <div class='col-md-12'>
+    <div class='card'>
+      <h5 class="card-header">{{pageTitle}}</h5>
+      <div class='card-block'>
+
+        <div class='has-error' *ngIf='errorMessage'>{{errorMessage}}</div>
+<p></p>
+        <div class='table-responsive'>
+          <table class='table' *ngIf='openHouses && openHouses.length'>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Begin Date</th>
+                <th>End Date</th>
+                <th>OpenHouse</th>
+                <th>
+                </th>
+                <th>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor='let openHouse of openHouses'>
+                <td>{{ openHouse.OpenHouseId }}</td>
+                <td>
+                  {{openHouse.OpenHouseBeginDate | date: 'dd/MM/yyyy hh:mm'}}
+                </td>
+                <td>
+                  {{openHouse.OpenHouseEndDate | date: 'dd/MM/yyyy hh:mm'}}
+                </td>
+                <td>
+                  {{openHouse.ListingName}}
+                </td>
+                <td>
+                  <button type="button" class="btn btn-success btn-sm" (click)="onEditClicked(openHouse.OpenHouseId, openHouse)">Edit</button>
+                </td>
+                <td>
+                  <button type="button" class="btn btn-danger btn-sm" (click)="onDeleteClicked(openHouse)">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <p></p>
+    <div class='card'>
+      <h5 class="card-header">{{actionTitle}}</h5>
+
+      <!-- Filter the OpenHouses   -->
+      <div class='card-block'>
+        <div class='row'>
+          <div class='col-sm-12'>
+            <div class="container">
+              <form #formCtrl="ngForm">
+                <div class="form-group row">
+                  <label for="inputEmail3" class="col-sm-2 col-form-label">OpenHouse ID</label>
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control greyed" name="inputOpenHouseId" placeholder="0" [(ngModel)]="inputOpenHouseId" readonly="true">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputEmail3" class="col-sm-2 col-form-label">Begin Date</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" name="inputOpenHouseBeginDate" [(ngModel)]="inputOpenHouseBeginDate" required>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputEmail3" class="col-sm-2 col-form-label">End Date</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" name="inputOpenHouseEndDate" [(ngModel)]="inputOpenHouseEndDate" required>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="offset-sm-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary" (click)="onSaveClicked()" [disabled]="!formCtrl.form.valid">Save</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class='has-error' *ngIf='errorMessage'>{{errorMessage}}</div>
+
+      </div>
+    </div>
+  </div>
+</div>
