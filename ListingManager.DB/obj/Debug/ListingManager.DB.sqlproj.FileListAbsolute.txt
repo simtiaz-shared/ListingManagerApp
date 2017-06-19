@@ -1,0 +1,12 @@
+C:\Angular\ListingManager\ListingManager.DB\bin\Debug\ListingManager.DB.dacpac
+C:\Angular\ListingManager\ListingManager.DB\bin\Debug\Scripts\Post-Deployment\dbo.Agent.Table.sql
+C:\Angular\ListingManager\ListingManager.DB\bin\Debug\Scripts\Post-Deployment\dbo.Listing.Table.sql
+C:\Angular\ListingManager\ListingManager.DB\bin\Debug\Scripts\Post-Deployment\dbo.OpenHouse.Table.sql
+C:\Angular\ListingManager\ListingManager.DB\bin\Debug\ListingManager.DB.dll
+C:\Angular\ListingManager\ListingManager.DB\bin\Debug\ListingManager.DB.pdb
+C:\Angular\ListingManager\ListingManager.DB\obj\Debug\ListingManager.DB.dll
+C:\Angular\ListingManager\ListingManager.DB\obj\Debug\ListingManager.DB.pdb
+C:\Angular\ListingManager\ListingManager.DB\obj\Debug\Model.xml
+C:\Angular\ListingManager\ListingManager.DB\obj\Debug\refactor.xml
+C:\Angular\ListingManager\ListingManager.DB\obj\Debug\postdeploy.sql
+C:\Angular\ListingManager\ListingManager.DB\obj\Debug\predeploy.sql
